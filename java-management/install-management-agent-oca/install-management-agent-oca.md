@@ -92,58 +92,23 @@ Do not disturb the setup in this time and only proceed after the status of the M
 
   ![image of add tag to agent](images/add-agent-tag.png)
 
-## Task 4: Configure Java Usage Tracker
-1. Connect to the instance, then configure Java Usage Tracker by executing the following JMS service plug-in setup scripts:
-    ```
-    <copy>
-    VERSION=$(sudo ls /var/lib/oracle-cloud-agent/plugins/oci-managementagent/polaris/agent_inst/config/destinations/OCI/services/jms/)
-    </copy>
-    ```
-    ```
-    <copy>
-    sudo bash /var/lib/oracle-cloud-agent/plugins/oci-managementagent/polaris/agent_inst/config/destinations/OCI/services/jms/"${VERSION}"/scripts/setup.sh --force
-    </copy>
-    ```
 
-2. This script creates the file `/etc/oracle/java/usagetracker.properties` with appropriate permissions. By default, the file contains the following lines:
-    ```
-    com.oracle.usagetracker.logToFile = /var/log/java/usagetracker.log
-    com.oracle.usagetracker.additionalProperties = java.runtime.name
-    ```
+## Task 4: Verify detection of Java applications and runtimes
+Now that the Management Agent has been set up in your compute instance, it will be able to detect the Java applications that have been executed in the compute instance. This can be observed in the Oracle Cloud Console.
 
-## Task 5: Verify detection of Java applications and runtimes
-For the logging of applications to be visible, Java applications must be run again after the installation of the Management Agent. Now that the Management Agent has been set up in your compute instance, it will be able to detect new Java applications that have been executed. This can be observed in the Oracle Cloud Console.
-
-We shall demonstrate the detection of the Java compiler and HelloWorld application created in [Lab 3](?lab=deploy-a-java-application).
-1. First, compile the HelloWorld.java file:
-
-    ```
-    <copy>
-    javac HelloWorld.java
-    </copy>
-    ```
-
-    Then execute the HelloWorld application:
-
-    ```
-    <copy>
-    java HelloWorld
-    </copy>
-    ```
-
-2. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
+1. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
 
   ![image of console navigation to java management](images/console-navigation-jms.png)
 
-3. Select the compartment that the fleet is in and click the fleet.
+2. Select the compartment that the fleet is in and click the fleet.
 
-4. Click **Java Runtimes** under **Resources**. If tagging and installation of management agents is successful, Java Runtimes will be indicated on the Fleet Main Page after 5 minutes.
+3. Click **Java Runtimes** under **Resources**. If tagging and installation of management agents is successful, Java Runtimes will be indicated on the Fleet Main Page after 5 minutes.
 
   You should see only one Java Runtime. This corresponds to the Java 8 installation from [Lab 3](?lab=deploy-a-java-application).
 
   ![image of successful installation](images/successful-installation.png)
 
-5. Click **Applications** under **Resources**. You should now see two applications. The first is from the javac compiler command and the second is from the HelloWorld application.
+4. Click **Applications** under **Resources**. You should now see two applications. The first is from the javac compiler command and the second is from the HelloWorld application.
 
   ![image of applications after successful installation](images/successful-installation-applications.png)
 
@@ -160,4 +125,4 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
 ## Acknowledgements
 
 * **Author** - Xin Yi Tay, Java Management Service
-* **Last Updated By** - Yixin Wei, June 2022
+* **Last Updated By** - Yixin Wei, July 2022
