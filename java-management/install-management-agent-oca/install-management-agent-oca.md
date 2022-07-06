@@ -13,14 +13,12 @@ In this lab, you will:
 * Enable Management Agents on Compute Instances
 * Deploy the JMS service plug-in on Management Agents
 * Associate the management agent with your fleet
-* Configure Java Usage Tracker
-* Monitor the Java runtime(s) and Java application(s) in JMS
+* Monitor the Java runtimes and Java applications in JMS
 
 ### Prerequisites
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-* You are using an Oracle Linux image on your host machine or compute instance for this workshop.
-* Access to the cloud environment and resources configured in [Lab 2](?lab=setup-a-fleet).
+* Access to the cloud environment and resources configured in [Lab 1](?lab=setup-a-fleet).
 
 ## Task 1: Enable Management Agent Plugin on Compute Instances
 

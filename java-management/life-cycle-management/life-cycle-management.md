@@ -10,15 +10,15 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-* Create a Delete Java Runtime Work Request using the Java Management Service user interface
+* Create a Install Java Runtime Work Request using the Java Management Service user interface
+* Create a Delete Java Runtime Work Request using the same user interface
 * Cancel a Delete Java Runtime Work Request using the same user interface
-
+* View and monitor the status of Delete Java Runtime Work Requests created using the same user interface
 
 ### Prerequisites
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-* You are using an Oracle Linux image on your host machine or compute instance for this workshop.
-* Access to the cloud environment and resources configured in Lab 1.
+* Access to the cloud environment and resources configured in Lab 2.
 
 ## Task 1: Install Java Runtime
 
