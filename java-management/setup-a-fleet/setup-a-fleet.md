@@ -10,11 +10,11 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-* Set up a Fleet using the Java Management Service user interface
+* Set up a Fleet using the Java Management Service console interface
 
 ### Prerequisites
 
-* You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
+* You have signed up for an account with Oracle Cloud Infrastructure and have requested workshop reservation on LiveLabs.
 
 ## Task 1: Set Up Java Management Service Fleet
 
@@ -22,29 +22,41 @@ In this lab, you will:
 
   ![image of console navigation to java management service](images/console-navigation-jms.png)
 
-2. Select the compartment created for JMS resources in Lab 1 (Compartment name should be **Fleet_Compartment**) and **Create Fleet**.
+2. Select the compartment **LLxxxxx-COMPARTMENT** indicated in your Login Info (Compartment should be under **jmslivelabs(root)** -> **LiveLabs**).
+
+  Click **Create Fleet**.
 
   ![image of create fleet](images/create-fleet-create-new.png)
 
 3. In the Create Fleet dialog box, enter a name for the Fleet Name (for example, `fleet_1`), and a description.
 
-4. Select **Create New Management Agent Configuration**.
+4. Select **Enable advanced features**.
 
   ![image of create fleet options page](images/create-fleet.png)
 
-5. Click **Next**.You are prompted to review the fleet information and management agent configuration. If you wish to modify your choices, click **Previous**.
+  Click **Agree**. This is to enable advanced Lifecycle Management (LCM) operations. You can still edit it after the fleet is created.
 
-6. Click **Create**. This creates a new fleet and a new management agent install key using the information you provided.
+  ![image of agree advanced features](images/select-advanced-agree.png)
+
+  LCM is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE runtimes (on-premises or in the Cloud) by performing LCM operations such as installing or removing Java Runtimes. If you would like to learn more about the Lifecycle Management feature, you may refer to [Perform Java Lifecycle Management with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202).
+
+5. Click **Next**. You are prompted to review the fleet information and management agent configuration. If you wish to modify your choices, click **Previous**.
+
+6. Click **Create**. This creates a new fleet and its configuration.
 
   ![image of create fleet confirm creation](images/create-fleet-create.png)
 
-7. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
+7. Click **Done**.
 
-8. Click the fleet. In the detail page, click on **Modify Agent Settings**.
+  ![image of finish create fleet](images/create-fleet-done.png)
+
+8. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
+
+9. Click the fleet. In the detail page, click on **Modify Agent Settings**.
 
   ![image of fleet details page](images/fleet-details-page-new.png)
 
-9. Change the **Java Runtime Discovery** and **Java Runtime Usage** to the desired value. For this example, change **Java Runtime Discovery** to **3 hours**, and **Java Runtime Usage** to **5 minutes**.
+10. Change the **Java Runtime Discovery** and **Java Runtime Usage** to the desired value. For this example, change **Java Runtime Discovery** to **3 hours**, and **Java Runtime Usage** to **5 minutes**.
 
   ![image of modify agent settings page](images/fleet-modify-agent-settings-new.png)
 
@@ -62,5 +74,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - Esther Neoh, Java Management Service
-* **Last Updated By** - Yixin Wei, July 2022
+* **Author** - Yixin Wei, Java Management Service
+* **Last Updated By** - Yixin Wei, August 2022

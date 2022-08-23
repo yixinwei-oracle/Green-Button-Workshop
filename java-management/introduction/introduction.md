@@ -30,15 +30,15 @@ As the stewards of Java, Oracle can provide answers to these questions. Oracle u
 
 ## About this Workshop
 
- This workshop will walk you through the process of setting up and using Java Management Service (JMS) on Oracle Cloud Infrastructure (OCI). It will first walk you through the process of creating a fleet, which is the primary collection with which you interact when using JMS and contains Managed Instances that share a common management approach. It will then get guide you through the process of setting up the Management Agent on a host machine to monitor Java applications and view them inside a fleet in JMS. Next, you will learn how to install and remove a Java Runtime using OCI console and cancel or view a work request. You will also get to view status and logs related to delete work requests. Finally, the workshop will show you how to view and monitor Lifecycle Management requests.
+ This workshop will walk you through the process of setting up and using Java Management Service (JMS) on Oracle Cloud Infrastructure (OCI). It will first walk you through the process of creating a fleet, which is the primary collection with which you interact when using JMS and contains Managed Instances that share a common management approach. It will then guide you through the process of setting up the Management Agent on a host machine (also known as a Managed Instance in JMS) to monitor Java applications and view them inside a fleet in JMS. Next, you will learn how to install and remove a Java Runtime using OCI console. You will also get to view status and logs related to delete work requests. Finally, the workshop will show you how to view and monitor Lifecycle Management requests.
 
 *Estimated Time:* 60 minutes
 
 ### Objectives
 
-* Creating a Fleet
-* Installing Management Agent on OCI computes using Oracle Cloud Agent (OCA)
-* Understanding and performing LCM operations with JMS
+* Set up a Fleet
+* Install Management Agent on Managed Instances
+* Understand and perform LCM operations with JMS
 
 ### Prerequisites
 
@@ -46,7 +46,11 @@ As the stewards of Java, Oracle can provide answers to these questions. Oracle u
 
 ## Extension Workshops
 
-If you would like to learn more about using JMS together with other OCI services, you may explore [Integrate OCI Services with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3203).
+If you would like to try JMS on your own tenancy, you may explore:
+
+* [Manage Java Runtimes, Applications and Managed Instances Inventory with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=912)
+* [Perform Java Lifecycle Management with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202)
+* [Integrate OCI Services with Java Management Service](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3203)
 
 
 ## Learn More
@@ -58,5 +62,5 @@ If you would like to learn more about using JMS together with other OCI services
 
 ## Acknowledgements
 
-* **Author** - Alvin Lam, Java Management Service
-* **Last Updated By/Date** - Yixin Wei, July 2022
+* **Author** - Yixin Wei, Java Management Service
+* **Last Updated By/Date** - Yixin Wei, August 2022

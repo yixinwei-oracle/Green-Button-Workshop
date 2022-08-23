@@ -2,35 +2,40 @@
 
 ## Introduction
 
-This lab walks you through the steps to remove Java Runtimes on your Fleet.
+Lifecycle Management (LCM) is a part of JMS's reporting and management infrastructure. JMS enables users to observe and manage the lifecycles of their Java SE runtimes (on-premises or in the Cloud) by performing LCM operations such installing or removing Java Runtimes.
 
-Estimated Time: 15 minutes
+As a customer, you can:
+  * View and identify the Java Runtimes.
+  * Install Java Runtimes.
+  * Remove unwanted Java Runtimes.
+  * View and understand various status and logs of LCM work requests.
+
+Estimated Time: 40 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-* Create a Install Java Runtime Work Request using the Java Management Service user interface
-* Create a Delete Java Runtime Work Request using the same user interface
-* Cancel a Delete Java Runtime Work Request using the same user interface
-* View and monitor the status of Delete Java Runtime Work Requests created using the same user interface
+* Understand LCM operations
+* Install Java Runtimes
+* Remove Java Runtimes
+* View and monitor LCM Work Requests
 
 ### Prerequisites
 
-* You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
-* Access to the cloud environment and resources configured in Lab 2.
+* You have signed up for an account with Oracle Cloud Infrastructure and have requested workshop reservation on LiveLabs.
+* Access to the cloud environment and resources configured in [Lab 1](?lab=setup-a-fleet) and [Lab 2](?lab=install-management-agent-oca).
 
-## Task 1: Install Java Runtime
 
-PlaceHolder
+## Task 1: Remove Java Runtimes
 
-## Task 2: Remove Java Runtime
+**Submit Delete Java Runtime Work Request**
 
 1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
  ![image of console navigation to java management service](images/console-navigation-jms.png)
 
 2. Under **Resources**, select **Java Runtimes**. You should see a list of the Java Runtimes that are currently in your Fleet.
- ![image of fleet details page](images/fleet-details-page.png)
+ ![image of fleet details page](images/fleet-details-page-delete.png)
 
 3. Select the Runtime that you would like to remove from your fleet and click **Delete**. Note that OpenJDKs are unable to be removed through Lifecycle Management at the moment.
 
@@ -45,30 +50,90 @@ PlaceHolder
   If your request is submitted successfully, you should receive a notification in green as seen below:
   ![image of submitted delete java runtime work request](images/delete-java-runtime-work-request-submitted.png)
 
-## Task 3: Cancel Lifecycle Management Work Requests
+**Verify Java Runtime Deletion**
 
-1. In the same **Java Management** page, under **Resources**, select **Work Requests**. You should see the Delete Java Runtime Work Request you submitted in Task 1. Click on the Work Request to view its details.
+> **Note:** The Delete Java Runtime Work Request will take around 10 minutes to complete, you may proceed to the next task first and come back to this section later.
+
+1. In the same **Java Management** page, under **Resources**, select **Work Requests**. You should see the Remove Java Runtime Work Request you submitted in Task 1. Click on the Work Request to view its details.
+ ![image of work request summary page](images/work-request-summary-page-delete.png)
+
+2. If your request has been accepted, the status will change to **In Progress**. It will take some time to complete.
+  ![image of pending work request](images/delete-pending-work-request.png)
+
+3. If your request has completed successfully, the status will change to **Completed without Errors**.
+  ![image of install completed without errors](images/delete-complete-without-errors.png)
+
+4. Return to your fleet page, under **Java Runtimes**, the deleted java runtime should not be reported after next scanning. You can also check the installation manually on your Managed Instance.
+  ![image of verify java runtime installation](images/verify-java-runtime-deletion.png)
+
+## Task 2: Install Java Runtimes
+
+> **Note:** Installing Java Runtimes can be performed **30 minutes** after the Java Management Service plugin status changes to **RUNNING**.
+
+**Submit Install Java Runtime Work Request**
+
+1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
+ ![image of console navigation to java management service](images/console-navigation-jms.png)
+
+2. Under **Resources**, select **Java Runtimes**. You should see a list of the Java Runtimes that are currently in your Fleet.
+ ![image of fleet details page](images/fleet-details-page.png)
+
+3. Click **Install Java Runtime**.
+
+  ![image of install java runtime](images/install-java-runtime.png)
+
+4. You will see an Install Java runtime window with current and archive releases of the Oracle Java Runtimes. You will also see a Summary table that lists the metadata, including **Runtime versions**, **Security State**, **Release date**, **End of service life** and **Release notes**. You may click the link under Release notes to open the details page in a new window.
+
+  Select the Java Runtime version you want to install, click **Install** to confirm the installation and submit a request for installation. This request is termed as a **Work Request**.
+
+  ![image of install runtime popup window](images/install-runtime-popup-window.png)
+
+  If your request is submitted successfully, you should receive a notification in green as seen below:
+  ![image of submitted install java runtime work request](images/install-java-runtime-work-request-submitted.png)
+
+**Verify Java Runtime Installation**
+
+> **Note:** The Install Java Runtime Work Request will take around 10 minutes to complete, you may proceed to the next task first and come back to this section later.
+
+1. In the same **Java Management** page, under **Resources**, select **Work Requests**. You should see the Install Java Runtime Work Request you submitted in Task 1. Click on the Work Request to view its details.
  ![image of work request summary page](images/work-request-summary-page.png)
 
+
+2. If your request has been accepted, the status will change to **In Progress**. It will take some time to complete.
+  ![image of pending work request](images/pending-work-request.png)
+
+3. If your request has completed successfully, the status will change to **Completed without Errors**.
+  ![image of install completed without errors](images/install-complete-without-errors.png)
+
+4. Return to your fleet page, under **Java Runtimes**, the installed java runtime should be indicated after next scanning. You can also check the installation manually on your Managed Instance.
+  ![image of verify java runtime installation](images/verify-java-runtime-installation.png)
+
+> **Note:** The installed Java Runtime may take up to 180 minutes to show up. Alternatively, you may use SSH command to connect to the compute instance and manually check the installation.
+
+
+## Task 3: Cancel Lifecycle Management Work Requests
+
+1. In the **Fleet** page, under **Resources**, select **Work Requests**. You should see the Work Requests you submitted. Click on the Work Request to view its details.
+  ![image of work request summary page](images/work-request-summary-page.png)
 
 2. If your Work Request is still in progress and you would like to cancel it, click **Cancel Work Request**.
   ![image of work request details page](images/delete-work-request-details-page.png)
 
 3. Click **Cancel work request** again to confirm.
-  ![image of cancel delete work request](images/cancel-delete-work-request.png)
+  ![image of cancel work request](images/cancel-delete-work-request.png)
 
 4. If your request has been canceled successfully, you should see that the **Status** of the request is marked as **Canceled**.
-  ![image of cancelled delete work request](images/canceled-delete-work-request.png)
+  ![image of cancelled work request](images/canceled-delete-work-request.png)
 
 ## Task 4: View and Monitor Lifecycle Management Requests
 
-### Overview of Work Request detailed views
+**Overview of Work Request detailed views**
 
 1. First, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**. Select the fleet that you are interested in.
  ![image of console navigation to java management service](images/console-navigation-jms.png)
 
 2. Under **Resources**, select **Work Requests**. You should see a list of the Work Requests that you have created. Select a **Work Request** that you are interested to view in detail.
- ![image of fleet details page](images/fleet-details-page.png)
+ ![image of fleet details page](images/fleet-details-page-view-monitor.png)
 
 3. The detailed view of a Work Request is divided into two sections:
     * Information about the Work Request, including:
@@ -91,7 +156,7 @@ PlaceHolder
    * **Status**: Status of the operation at the associated resource.
    * **Last updated**: Date and time when the status for this associated resource was last updated.
 
-  ![image of work request associated resources view](images/work-request-associated-resources.png)
+  ![image of work request associated resources view](images/work-request-associated-resources-view-monitor.png)
 
 
   For the list of **Log Messages**, you may find the following information:
@@ -107,19 +172,19 @@ PlaceHolder
 
   ![image of work request error messages view](images/work-request-error-messages.png)
 
-### View status and logs related to Delete Work Request
+**View status and logs of a Work Request**
 
-1. In the **Fleet** page, under **Resources**, select **Work Requests**. Click on the Delete Work Request you are interested in to view its details.
- ![image of work request summary page](images/work-request-summary-page.png)
+1. In the **Fleet** page, under **Resources**, select **Work Requests**. Click on the Work Request you are interested in to view its details.
+ ![image of work request summary page](images/work-request-summary-page-view-monitor.png)
 
 2. If your request was successful, you should see that the **Status** of the request is marked as **Succeeded** and **Completed without errors**.
- ![image of successful delete work request](images/delete-java-runtime-succeeded.png)
+ ![image of successful work request](images/delete-java-runtime-succeeded-view-monitor.png)
 
-3. If you would like to view the log messages for the Delete Java Runtime Work Request, select **Log Messages** under **Resources**. You should see the log messages in detail.
- ![image of delete work request log messages](images/delete-work-request-log-messages.png)
+3. If you would like to view the log messages for the Work Request, select **Log Messages** under **Resources**. You should see the log messages in detail.
+ ![image of work request log messages](images/delete-work-request-log-messages-view-monitor.png)
 
 4. If your Work Request was unsuccessful, you may view the error messages by selecting **Error Messages** under **Resources**. You should see the status as **Failed** and the corresponding error messages.
-  ![image of delete work request failed error messages](images/delete-work-request-failed-error-message.png)
+  ![image of work request failed error messages](images/delete-work-request-failed-error-message.png)
 
 
 ## Learn More
@@ -131,5 +196,5 @@ PlaceHolder
 
 ## Acknowledgements
 
-* **Author** - Xin Yi Tay, Java Management Service
-* **Last Updated By** - Yixin Wei, July 2022
+* **Author** - Yixin Wei, Java Management Service
+* **Last Updated By** - Yixin Wei, August 2022
