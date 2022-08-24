@@ -66,6 +66,8 @@ In this lab, you will:
 4. Return to your fleet page, under **Java Runtimes**, the deleted java runtime should not be reported after next scanning. You can also check the installation manually on your Managed Instance.
   ![image of verify java runtime installation](images/verify-java-runtime-deletion.png)
 
+> **Note:** Alternatively, you may use SSH command to connect to the compute instance and manually check the deletion.
+
 ## Task 2: Install Java Runtimes
 
 > **Note:** Installing Java Runtimes can be performed **30 minutes** after the Java Management Service plugin status changes to **RUNNING**.
