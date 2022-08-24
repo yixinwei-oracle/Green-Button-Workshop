@@ -1,8 +1,8 @@
-# Install Management Agent on your Managed Instance
+# Install Management Agent on your Managed Instance using OCI console
 
 ## Introduction
 
-This lab walks you through the steps to set up Java Management Service and Management Agent plugins on your OCI compute instance host using the Oracle Cloud Agent to allow Java Usage Tracking and Lifecycle Management by the Java Management Service (JMS).
+This lab walks you through the steps to set up Java Management Service and Management Agent plugins on your OCI compute instance host using the Oracle Cloud Agent to allow Java Usage Tracking and Lifecycle Management by the Java Management Service (JMS) using OCI console.
 
 Estimated Time: 15 minutes
 

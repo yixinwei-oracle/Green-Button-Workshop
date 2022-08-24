@@ -46,9 +46,15 @@ In this lab, you will:
 
   ![image of create fleet confirm creation](images/create-fleet-create.png)
 
-7. Click **Done**.
+7. Click **Download installation script**.
 
-  ![image of finish create fleet](images/create-fleet-done.png)
+  ![image of page to download installation script](images/download-installation-script.png)
+
+  Click the Linux version of the installation script to download it.
+
+  ![image of page to select installation script os](images/download-installation-script-os.png)
+
+  Click **Close** and **Done** once the download is complete. The downloaded file will be used in [Lab 2: Install Management Agent on your Managed Instances using Cloud Shell](?lab=install-management-agent-script) to install the Management Agent. You can still download the installation script after the fleet is created.
 
 8. After JMS is linked to the management agent, it will collect information on your Java runtimes. As the management agent will scan the instance periodically, the information may not appear immediately. The scanning frequency can be changed here.
 
