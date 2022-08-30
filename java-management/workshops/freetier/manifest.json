@@ -22,11 +22,7 @@
             "filename": "../../install-management-agent-script/install-management-agent-script.md"
         },
         {
-            "title": "Lab 3: Install Management Agent on your Managed Instance using OCI console",
-            "filename": "../../install-management-agent-oca/install-management-agent-oca.md"
-        },
-        {
-            "title": "Lab 4: Perform Java Lifecycle Management with Java Management Service",
+            "title": "Lab 3: Perform Java Lifecycle Management with Java Management Service",
             "filename":"../../life-cycle-management/life-cycle-management.md"
 
         },

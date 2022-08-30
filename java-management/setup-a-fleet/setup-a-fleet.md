@@ -26,7 +26,9 @@ In this lab, you will:
 
   Click **Create Fleet**.
 
-  ![image of create fleet](images/create-fleet-create-new.png)
+    > **Note:** You do not need to click **Inspect Prerequisites** here as the prerequisites are already set up for you.
+
+    ![image of create fleet](images/create-fleet-create-new.png)
 
 3. In the Create Fleet dialog box, enter a name for the Fleet Name (for example, `fleet_1`), and a description.
 
@@ -81,4 +83,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Yixin Wei, Java Management Service
-* **Last Updated By** - Yixin Wei, August 2022
+* **Last Updated By** - Yixin Wei, September 2022

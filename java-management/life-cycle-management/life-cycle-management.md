@@ -63,10 +63,16 @@ In this lab, you will:
 3. If your request has completed successfully, the status will change to **Completed without Errors**.
   ![image of install completed without errors](images/delete-complete-without-errors.png)
 
-4. Return to your fleet page, under **Java Runtimes**, the deleted java runtime should not be reported after next scanning. You can also check the installation manually on your Managed Instance.
+4. Return to your fleet page, under **Java Runtimes**, the deleted java runtime should not be reported after next scanning.
   ![image of verify java runtime installation](images/verify-java-runtime-deletion.png)
 
-> **Note:** Alternatively, you may use SSH command to connect to the compute instance and manually check the deletion.
+5. Alternatively, you may use SSH command to connect to the compute instance and enter the following command to check the deletion manually.
+
+    ```
+    <copy>
+    ls /usr/java
+    </copy>
+    ```
 
 ## Task 2: Install Java Runtimes
 
@@ -107,27 +113,18 @@ In this lab, you will:
 3. If your request has completed successfully, the status will change to **Completed without Errors**.
   ![image of install completed without errors](images/install-complete-without-errors.png)
 
-4. Return to your fleet page, under **Java Runtimes**, the installed java runtime should be indicated after next scanning. You can also check the installation manually on your Managed Instance.
+4. Return to your fleet page, under **Java Runtimes**, the installed java runtime should be indicated after next scanning. The installed Java Runtime may take up to 180 minutes to show up in the console.
   ![image of verify java runtime installation](images/verify-java-runtime-installation.png)
 
-> **Note:** The installed Java Runtime may take up to 180 minutes to show up. Alternatively, you may use SSH command to connect to the compute instance and manually check the installation.
+5. Alternatively, you may use SSH command to connect to the compute instance and enter the following command to check the installation manually.
 
+    ```
+    <copy>
+    ls /usr/java
+    </copy>
+    ```
 
-## Task 3: Cancel Lifecycle Management Work Requests
-
-1. In the **Fleet** page, under **Resources**, select **Work Requests**. You should see the Work Requests you submitted. Click on the Work Request to view its details.
-  ![image of work request summary page](images/work-request-summary-page.png)
-
-2. If your Work Request is still in progress and you would like to cancel it, click **Cancel Work Request**.
-  ![image of work request details page](images/delete-work-request-details-page.png)
-
-3. Click **Cancel work request** again to confirm.
-  ![image of cancel work request](images/cancel-delete-work-request.png)
-
-4. If your request has been canceled successfully, you should see that the **Status** of the request is marked as **Canceled**.
-  ![image of cancelled work request](images/canceled-delete-work-request.png)
-
-## Task 4: View and Monitor Lifecycle Management Requests
+## Task 3: View and Monitor Lifecycle Management Requests
 
 **Overview of Work Request detailed views**
 
@@ -148,7 +145,6 @@ In this lab, you will:
         * Error Messages
 
   ![image of detailed view of work request page](images/work-request-detailed-view.png)
-
 
 4. For the list of resources which include **Associated Resources**, **Log Messages** and **Error Messages**, each list displays **50** rows at a time. You may click the header of a column to sort the list based on the title of the column, or use the text field to search the contents of the table.
 
@@ -188,6 +184,20 @@ In this lab, you will:
 4. If your Work Request was unsuccessful, you may view the error messages by selecting **Error Messages** under **Resources**. You should see the status as **Failed** and the corresponding error messages.
   ![image of work request failed error messages](images/delete-work-request-failed-error-message.png)
 
+**Cancel a Work Request**
+
+1. In the **Fleet** page, under **Resources**, select **Work Requests**. You should see the Work Requests you submitted. Click on the Work Request to view its details.
+  ![image of work request summary page](images/work-request-summary-page.png)
+
+2. If your Work Request is still in progress and you would like to cancel it, click **Cancel Work Request**.
+  ![image of work request details page](images/delete-work-request-details-page.png)
+
+3. Click **Cancel work request** again to confirm.
+  ![image of cancel work request](images/cancel-delete-work-request.png)
+
+4. If your request has been canceled successfully, you should see that the **Status** of the request is marked as **Canceled**.
+  ![image of cancelled work request](images/canceled-delete-work-request.png)
+
 
 ## Learn More
 * Refer to the [Java Runtime Lifecycle Management](https://docs.oracle.com/en-us/iaas/jms/doc/java-runtime-lifecycle-management.html), [Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/getting-started-java-management-service.html#GUID-47C63464-BC0C-4059-B552-ED9F33E77ED3) and [Viewing a Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/fleet-views.html#GUID-F649F0E5-DD54-4DEC-A0F1-942FE3552C93) sections of the JMS documentation for more details.
@@ -199,4 +209,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Author** - Yixin Wei, Java Management Service
-* **Last Updated By** - Yixin Wei, August 2022
+* **Last Updated By** - Yixin Wei, September 2022

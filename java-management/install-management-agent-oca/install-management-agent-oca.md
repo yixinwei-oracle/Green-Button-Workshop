@@ -90,13 +90,15 @@ Now that the Management Agent has been set up in your compute instance, it will 
 
 2. Select the compartment that the fleet is in and click the fleet.
 
-3. Click **Java Runtimes** under **Resources**. If tagging and installation of management agents is successful, Java Runtimes will be indicated on the Fleet Main Page after 5 minutes.
+3. Click **Managed instances** under **Resources**. If tagging and installation of the management agent is successful, the tagged Managed Instance will be indicated on the Fleet Main Page after 5 minutes.
 
-  You should see a list of Java Runtimes from Java 8 to Java 18, these Java Runtimes are pre-installed in the compute instance in Task 1.
+  ![image of successful installation instance](images/successful-installation-instance.png)
+
+4. Click **Java Runtimes** under **Resources**. You should see a list of Java Runtimes from Java 8 to Java 18, these Java Runtimes are pre-installed in the compute instance in Task 1.
 
   ![image of successful installation](images/successful-installation.png)
 
-4. Click **Applications** under **Resources**. You should now see four applications. The first three are examples of DropWizard, SpringBoot and Micronaut, these applications are pre-installed and running in the compute instance in Task 1. The fourth is the Oracle Java Management Service plugin.
+5. Click **Applications** under **Resources**. You should now see four applications. The first three are examples of DropWizard, SpringBoot and Micronaut, these applications are pre-installed and running in the compute instance in Task 1. The fourth is the Oracle Java Management Service plugin.
 
   ![image of applications after successful installation](images/successful-installation-applications.png)
 
@@ -113,4 +115,4 @@ Now that the Management Agent has been set up in your compute instance, it will 
 ## Acknowledgements
 
 * **Author** - Yixin Wei, Java Management Service
-* **Last Updated By** - Yixin Wei, August 2022
+* **Last Updated By** - Yixin Wei, September 2022
