@@ -91,6 +91,19 @@ In this lab, you will:
      </copy>
      ```
 
+4. If installation is successful, you'll see a message similar to the following:
+
+     ```
+     <copy>
+     ...
+     Management Agent installation has been completed.
+     Management Agent plugin 'Java Management Service' installation has been completed.
+     Management Agent plugin 'Java Usage Tracking' installation has been completed.
+     Management Agent was successfully registered using key YourFleetName (ocid1.managementagentinstallkey.oc1.iad.<some ocid hash>).
+     Assigned JMS Fleet is YourFleetName (ocid1.jmsfleet.oc1.iad.<some ocid hash>).
+     </copy>
+     ```
+
 ## Task 3: Verify detection of Java applications and runtimes
 
 Now that the Management Agent has been set up in your compute instance, it will be able to detect the Java applications that have been executed in the compute instance. This can be observed in the Oracle Cloud Console.
