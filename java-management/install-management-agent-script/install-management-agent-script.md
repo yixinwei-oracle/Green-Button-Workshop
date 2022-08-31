@@ -11,8 +11,6 @@ Estimated Time: 15 minutes
 In this lab, you will:
 
 - Install a Management Agent on a compute instance
-- Verify Management Agent and Plug-ins
-- Check that management agent is tagged with the Fleet OCID
 - Monitor the Java Runtimes and Java applications in JMS
 
 ### Prerequisites
@@ -25,13 +23,15 @@ In this lab, you will:
 
   ![image of location of Cloud Shell icon](images/oci-cloud-shell-navigate.png)
 
-  The Cloud Shell will open and may look something like this.
+  OCI Cloud Shell web terminal will open.
   ![image of Cloud Shell terminal](images/oci-cloud-shell-console.png)
+
+  OCI Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console. Cloud Shell provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI, a pre-authenticated Ansible installation, and other useful tools for following Oracle Cloud Infrastructure service tutorials and labs. Read more about using Cloud Shell [here](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm).
 
   You can use the icons in the upper right corner of the Cloud Shell window to minimize, maximize, and close your Cloud Shell session.
   ![image of buttons on Cloud Shell](images/oci-cloud-shell-buttons.png)
 
-2. Prepare your SSH private key and the installation script for Linux downloaded in [Lab 1](?lab=setup-a-fleet). Click **Cloud Shell Menu** and **Upload**.
+2. Prepare the SSH private key pair of the public key provided for the reservation and the installation script for Linux downloaded in [Lab 1](?lab=setup-a-fleet). Click **Cloud Shell Menu** and **Upload**.
   ![image of Cloud Shell Menu](images/cloud-shell-menu.png)
 
 3. In the popup windows, select your file and click **Upload**. You should upload SSH private key and the installation script separately.
