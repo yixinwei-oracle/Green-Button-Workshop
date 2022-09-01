@@ -32,6 +32,12 @@ As the stewards of Java, Oracle can provide answers to these questions. Oracle u
 
  This workshop will walk you through the process of setting up and using Java Management Service (JMS) on Oracle Cloud Infrastructure (OCI). It will first walk you through the process of creating a fleet, which is the primary collection with which you interact when using JMS and contains Managed Instances that share a common management approach. It will then guide you through the process of setting up the Management Agent on a host machine (also known as a Managed Instance in JMS) to monitor Java applications and view them inside a fleet in JMS. Next, you will learn how to install and remove a Java Runtime using OCI console. You will also get to view status and logs related to delete work requests. Finally, the workshop will show you how to view and monitor Lifecycle Management requests.
 
+ In this workshop, we have created an Oracle Linux compute instance with preloaded Java untimes and running Java applications. You can view this compute instance by going to the navigation menu, click **Compute**, and then click **Instances**.
+
+![image of console navigation to compute instances](images/console-navigation-instance-short.png)
+
+ We will then setup JMS and install management agent on this compute in the following labs to observe and manage the Java Runtimes and Java applications in this compute instance.
+
 *Estimated Time:* 60 minutes
 
 ### Objectives

@@ -1,4 +1,4 @@
-# Install Management Agent on your Managed Instances
+# Install Management Agent on your Managed Instances using Cloud Shell
 
 ## Introduction
 
@@ -16,10 +16,13 @@ In this lab, you will:
 ### Prerequisites
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have requested workshop reservation on LiveLabs.
+* A running compute instance with preloaded Java Runtimes and Java applications (already created for you) that you will be monitoring.
 
-## Task 1: Prepare installation script for Management Agent installation
+## Task 1: Transfer installation script to the compute instance
 
-1. Click the Cloud Shell icon in the Console header. This icon is accessible from mostly all the OCI Console pages.
+> **Note:** The following tasks make use of OCI Cloud Shell to SSH into the compute instance. You can also use your own preferred command line interface to perform the same tasks, however we recommend using OCI Cloud Shell instead if your local machine has network restrictions and proxies preventing SSH connections. 
+
+1. Click the Cloud Shell icon in the Console header.
 
   ![image of location of Cloud Shell icon](images/oci-cloud-shell-navigate.png)
 
@@ -65,7 +68,7 @@ In this lab, you will:
   The output may look like this:
   ![image of scp output](images/cloud-shell-scp-output.png)
 
-## Task 2: Install Management Agent
+## Task 2: Perform Management Agent Installation using Installation Script
 
 1. In the Cloud Shell, enter the following command to connect to your instance using SSH. The IP address should be the one you copied in task 1.
 
@@ -83,7 +86,7 @@ In this lab, you will:
      </copy>
      ```
 
-3. Enter the following command to run the installation script. The installation may around 10 minutes to complete.
+3. Enter the following command to run the installation script. The installation may take around 10 minutes to complete. Please do not close your browser, Cloud Shell or your terminal while the installation is taking place.
 
      ```
      <copy>

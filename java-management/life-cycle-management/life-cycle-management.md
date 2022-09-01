@@ -24,8 +24,8 @@ In this lab, you will:
 ### Prerequisites
 
 * You have signed up for an account with Oracle Cloud Infrastructure and have requested workshop reservation on LiveLabs.
+* A running compute instance with preloaded Java Runtimes and Java applications (already created for you) that you will be monitoring.
 * Access to the cloud environment and resources configured in [Lab 1](?lab=setup-a-fleet) and [Lab 2](?lab=install-management-agent-oca).
-
 
 ## Task 1: Remove Java Runtimes
 
